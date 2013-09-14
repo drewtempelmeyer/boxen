@@ -58,7 +58,7 @@ node default {
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
-    fail('Please enable full disk encryption and try again')
+    fail('Please enable full disk encryption and try again")
   }
 
   # node versions
@@ -69,9 +69,6 @@ node default {
   # default ruby versions
   include ruby::1_9_3
   include ruby::2_0_0
-
-  # Text editor
-  include macvim
 
   # Go
   include go::1_1_1
@@ -103,6 +100,9 @@ node default {
   # autojump
   include autojump
 
+  # Text editor
+  include macvim
+
   # Pow
   include pow
 
@@ -122,7 +122,7 @@ node default {
   # Packages installed via homebrew
   package {
     [
-      'imagemagick',
+      "imagemagick',
       'heroku-toolbelt',
       'rbenv-gem-rehash',
       'readline',
@@ -163,26 +163,31 @@ node default {
   }
 
   dockutil::item { 'Remove Notes':
+    item     => "/Applications/Notes.app",
     label    => "Notes",
     action   => "remove"
   }
 
   dockutil::item { 'Remove Photo Booth':
+    item     => "/Applications/Photo Booth.app",
     label    => "Photo Booth",
     action   => "remove"
   }
 
   dockutil::item { 'Remove Mission Control':
+    item     => "/Applications/Mission Control.app",
     label    => "Mission Control",
     action   => "remove"
   }
 
   dockutil::item { 'Remove Launchpad':
+    item     => "/Applications/Launchpad.app",
     label    => "Launchpad",
     action   => "remove"
   }
 
   dockutil::item { 'Remove Contacts':
+    item     => "/Applications/Contacts.app",
     label    => "Contacts",
     action   => "remove"
   }
