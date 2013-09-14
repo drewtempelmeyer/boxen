@@ -55,8 +55,6 @@ node default {
   # core modules, needed for most things
   include dnsmasq
   include git
-  include hub
-  include nginx
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
@@ -64,16 +62,76 @@ node default {
   }
 
   # node versions
-  include nodejs::v0_4
   include nodejs::v0_6
   include nodejs::v0_8
   include nodejs::v0_10
 
   # default ruby versions
-  include ruby::1_8_7
-  include ruby::1_9_2
   include ruby::1_9_3
   include ruby::2_0_0
+
+  # Text editor
+  include macvim
+
+  # Go
+  include go::1_1_1
+
+  # Java
+  include java
+
+  # PhantomJS
+  include phantomjs
+
+  # Postgres.app
+  include postgresapp
+
+  # Redis
+  include redis
+
+  # Sequel Pro
+  include sequel_pro
+
+  # iTerm 2
+  include iterm2::stable
+
+  # zsh
+  include zsh
+
+  # autojump
+  include autojump
+
+  # Pow
+  include pow
+
+  # Alfred
+  include alfred
+
+  # Browsers
+  include chrome
+  include firefox
+
+  # Vagrant
+  include vagrant
+
+  # Virtualbox
+  include virtualbox
+
+  # OS Customizations
+  include osx::global::expand_save_dialog
+  include osx::global::disable_remote_control_ir_receiver
+  include osx::dock::autohide
+  include osx::finder::empty_trash_securely
+  include osx::software_update
+  include osx::no_network_dsstores
+
+  class { 'osx::dock::icon_size':
+    size => 26
+  }
+
+  #### Additional Goodies
+
+  # Spotify
+  include spotify
 
   # common, useful packages
   package {
