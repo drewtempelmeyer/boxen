@@ -53,3 +53,4 @@ github "zsh",        "1.0.0"
 
 mod "ohmyzsh", "1.0.0", :github_tarball => "samjsharpe/puppet-ohmyzsh"
 mod "dockutil", "0.1.2", :github_tarball => "grahamgilbert/puppet-dockutil"
+mod "maximumawesome", nil, :github_tarball => "drewtempelmeyer/puppet-maximumawesome"

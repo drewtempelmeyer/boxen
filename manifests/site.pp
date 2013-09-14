@@ -103,6 +103,9 @@ node default {
   # Text editor
   include macvim
 
+  # maximum-awesome
+  include maximumawesome
+
   # Pow
   include pow
 
