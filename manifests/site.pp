@@ -85,6 +85,9 @@ node default {
   # Postgres.app
   include postgresapp
 
+  # MySQL
+  include mysql
+
   # Redis
   include redis
 
@@ -121,7 +124,6 @@ node default {
     [
       'imagemagick',
       'heroku-toolbelt',
-      'mariadb',
       'rbenv-gem-rehash',
       'readline',
       'scala',
@@ -141,6 +143,48 @@ node default {
 
   class { 'osx::dock::icon_size':
     size => 26
+  }
+
+  # Add/remove applications to the Dock
+  include dockutil
+
+  dockutil::item { 'Add iTerm':
+    item     => "/Applications/iTerm.app",
+    label    => "iTerm",
+    action   => "add",
+    position => 2,
+  }
+
+  dockutil::item { 'Add MacVim':
+    item     => "/Applications/MacVim.app",
+    label    => "MacVim",
+    action   => "add",
+    position => 3,
+  }
+
+  dockutil::item { 'Remove Notes':
+    label    => "Notes",
+    action   => "remove"
+  }
+
+  dockutil::item { 'Remove Photo Booth':
+    label    => "Photo Booth",
+    action   => "remove"
+  }
+
+  dockutil::item { 'Remove Mission Control':
+    label    => "Mission Control",
+    action   => "remove"
+  }
+
+  dockutil::item { 'Remove Launchpad':
+    label    => "Launchpad",
+    action   => "remove"
+  }
+
+  dockutil::item { 'Remove Contacts':
+    label    => "Contacts",
+    action   => "remove"
   }
 
   #### Additional Goodies
