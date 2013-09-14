@@ -128,7 +128,7 @@ node default {
       'sbt',
       'play',
       'ctags'
-    ]
+    ]:
   }
 
   # OS Customizations
