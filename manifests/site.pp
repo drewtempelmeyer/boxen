@@ -116,6 +116,21 @@ node default {
   # Virtualbox
   include virtualbox
 
+  # Packages installed via homebrew
+  package {
+    [
+      'imagemagick',
+      'heroku-toolbelt',
+      'mariadb',
+      'rbenv-gem-rehash',
+      'readline',
+      'scala',
+      'sbt',
+      'play',
+      'ctags'
+    ]
+  }
+
   # OS Customizations
   include osx::global::expand_save_dialog
   include osx::global::disable_remote_control_ir_receiver
@@ -136,7 +151,7 @@ node default {
   # common, useful packages
   package {
     [
-      'ack',
+      'the_silver_searcher',
       'findutils',
       'gnu-tar'
     ]:
