@@ -55,7 +55,7 @@ github "dropbox",    "1.1.1"
 github "steam",      "1.0.1"
 github "mou",        "1.1.3"
 
-mod "property_list_key", "0.1.0"
+mod "property_list_key", "0.1.0", :github_tarball => "glarizza/puppet-property_list_key"
 
 mod "ohmyzsh", "1.0.0", :github_tarball => "samjsharpe/puppet-ohmyzsh"
 mod "dockutil", "0.1.2", :github_tarball => "grahamgilbert/puppet-dockutil"
