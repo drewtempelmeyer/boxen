@@ -97,6 +97,9 @@ node default {
   # zsh
   include zsh
 
+  # ohmyzsh
+  include ohmyzsh
+
   # autojump
   include autojump
 
