@@ -155,7 +155,8 @@ node default {
       'scala',
       'sbt',
       'play',
-      'ctags'
+      'ctags',
+      'ruby-build'
     ]:
   }
 
