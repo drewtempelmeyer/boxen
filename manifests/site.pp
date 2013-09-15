@@ -124,6 +124,12 @@ node default {
   # Virtualbox
   include virtualbox
 
+  # Dropbox
+  include dropbox
+
+  # Steam
+  include steam
+
   # Packages installed via homebrew
   package {
     [

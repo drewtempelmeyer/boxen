@@ -50,6 +50,8 @@ github "spotify",    "1.0.1"
 github "vagrant",    "2.0.11"
 github "virtualbox", "1.0.5"
 github "zsh",        "1.0.0"
+github "dropbox",    "1.1.1"
+github "steam",      "1.0.1"
 
 mod "ohmyzsh", "1.0.0", :github_tarball => "samjsharpe/puppet-ohmyzsh"
 mod "dockutil", "0.1.2", :github_tarball => "grahamgilbert/puppet-dockutil"
