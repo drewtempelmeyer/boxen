@@ -103,6 +103,18 @@ node default {
   # Text editor
   include macvim
 
+  # Mou
+  include mou
+  include mou::themes
+
+  mou::preferences { 'Mou':
+    theme => 'Solarized (Dark)+',
+    css   => 'GitHub2'
+  }
+
+  # Heroku
+  include heroku
+
   # maximum-awesome
   class { 'maximumawesome':
     repo => 'drewtempelmeyer/vimfiles'
