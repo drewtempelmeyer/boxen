@@ -217,7 +217,7 @@ node default {
     ]:
   }
 
-  file { "${::boxen_home}/Library/Fonts/Anonymice-Powerline.ttf":
+  file { "/Users/${::boxen_user}/Library/Fonts/Anonymice-Powerline.ttf":
     ensure => link,
     links  => follow,
     target => "${::boxen_repodir}/files/fonts/Anonymice-Powerline.ttf"
