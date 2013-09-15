@@ -58,7 +58,7 @@ node default {
 
   # fail if FDE is not enabled
   if $::root_encrypted == 'no' {
-    fail("Please enable full disk encryption and try again")
+    fail('Please enable full disk encryption and try again')
   }
 
   # node versions
@@ -104,7 +104,9 @@ node default {
   include macvim
 
   # maximum-awesome
-  include maximumawesome
+  class { 'maximumawesome':
+    repo => 'drewtempelmeyer/vimfiles'
+  }
 
   # Pow
   include pow
@@ -152,47 +154,47 @@ node default {
   include dockutil
 
   dockutil::item { 'Add iTerm':
-    item     => "/Applications/iTerm.app",
-    label    => "iTerm",
-    action   => "add",
+    item     => '/Applications/iTerm.app',
+    label    => 'iTerm',
+    action   => 'add',
     position => 2,
   }
 
   dockutil::item { 'Add MacVim':
-    item     => "/Applications/MacVim.app",
-    label    => "MacVim",
-    action   => "add",
+    item     => '/Applications/MacVim.app',
+    label    => 'MacVim',
+    action   => 'add',
     position => 3,
   }
 
   dockutil::item { 'Remove Notes':
-    item     => "/Applications/Notes.app",
-    label    => "Notes",
-    action   => "remove"
+    item     => '/Applications/Notes.app',
+    label    => 'Notes',
+    action   => 'remove'
   }
 
   dockutil::item { 'Remove Photo Booth':
-    item     => "/Applications/Photo Booth.app",
-    label    => "Photo Booth",
-    action   => "remove"
+    item     => '/Applications/Photo Booth.app',
+    label    => 'Photo Booth',
+    action   => 'remove'
   }
 
   dockutil::item { 'Remove Mission Control':
-    item     => "/Applications/Mission Control.app",
-    label    => "Mission Control",
-    action   => "remove"
+    item     => '/Applications/Mission Control.app',
+    label    => 'Mission Control',
+    action   => 'remove'
   }
 
   dockutil::item { 'Remove Launchpad':
-    item     => "/Applications/Launchpad.app",
-    label    => "Launchpad",
-    action   => "remove"
+    item     => '/Applications/Launchpad.app',
+    label    => 'Launchpad',
+    action   => 'remove'
   }
 
   dockutil::item { 'Remove Contacts':
-    item     => "/Applications/Contacts.app",
-    label    => "Contacts",
-    action   => "remove"
+    item     => '/Applications/Contacts.app',
+    label    => 'Contacts',
+    action   => 'remove'
   }
 
   #### Additional Goodies
