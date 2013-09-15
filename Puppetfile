@@ -59,4 +59,4 @@ mod "property_list_key", "0.1.0", :github_tarball => "glarizza/puppet-property_l
 
 mod "ohmyzsh", "1.0.0", :github_tarball => "samjsharpe/puppet-ohmyzsh"
 mod "dockutil", "0.1.2", :github_tarball => "grahamgilbert/puppet-dockutil"
-mod "maximumawesome", "0.2.1", :github_tarball => "drewtempelmeyer/puppet-maximumawesome"
+mod "maximumawesome", "0.2.2", :github_tarball => "drewtempelmeyer/puppet-maximumawesome"
